@@ -1,0 +1,391 @@
+body
+    padding: 0
+    margin: 0
+    
+    #test_task
+        max-width: 1440px
+        background: #F0F1F3
+        margin: 0 auto
+        font-family: Inter, sans-serif
+        padding-top: 20px 
+    *
+        box-sizing: border-box
+    a 
+        text-decoration: none
+        color: black
+
+.test_task-inner-container
+    margin: 0 auto
+    padding: 0 30px
+    max-width: 1299px
+
+.header 
+    max-width: 1239px
+    margin: 0 auto 51px auto
+
+.header-upper 
+    display: flex
+    align-items: center
+    p
+        font-weight: 700
+        padding: 0
+        margin: 0
+    .header-upper__input
+        margin-left: 13%
+        position: relative
+        max-width: 609px
+        width: 50%
+        input
+            width: 100%
+            height: 40px
+            background: #F0F1F3
+            border-radius: 80px
+            border: 1px solid rgba(0, 0, 0, 0.10)
+            background: #F8F8F8
+        svg
+            position: absolute
+            top: 6px
+            right: 6px
+            cursor: pointer
+
+.header-upper__burger
+    display: none
+    cursor: pointer
+
+
+
+.header-upper__icons
+    display: flex
+    justify-content: space-between
+    margin-left: auto
+    svg
+        margin-left: 24px
+    svg:hover
+        cursor: pointer
+        path
+            fill: orange
+    path:hover
+        fill: orange
+            
+
+.header-down
+    display: flex
+    justify-content: space-between
+    width: 764px
+    margin: 20px 0
+    a
+        font-weight: 500
+        &:hover
+            color: orange
+    
+
+.main-wrapper
+    display: flex
+    justify-content: space-between
+    height: 910px
+
+
+.side-bar-wrapper
+    width: 190px
+    // height: 910px
+    margin-right: 10px
+    border-radius: 32px 32px 0px 0px
+    background: #FFF
+    p
+        display: flex
+        align-items: center
+        gap: 10px
+        cursor: pointer
+        &:hover
+            color: orange
+            svg path
+                fill: currentColor
+
+.side-bar
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    padding: 60.5px 10px 20px 20px
+    height: 100%
+
+.side-bar__up p
+    margin: 0 0 60px 0
+
+
+.side-bar__down p
+    margin: 0    
+
+.data
+    max-width: 1030px
+    width: 100%
+    // height: 914px
+    border-radius: 32px 32px 0px 0px
+    background: #FFF
+
+.data__header
+    display: flex
+    justify-content: space-between
+    align-items: flex-end
+    max-width: 715px
+    margin: 60px 0 0 105px 
+    button
+        height: 39px
+        max-width: 190px
+        width: 100%
+        border-radius: 12px
+        background: #F8F8F8
+        margin-bottom: 12px
+        border: none
+    p
+        display: none
+        
+
+.data__header-avatar
+    position: relative
+    height: 120px
+
+.data__header-logo
+    display: none    
+
+.add_avatar
+    position: absolute
+    bottom: 0px
+    right: -3px
+    cursor: pointer
+
+.data__form-tabbar
+    display: none
+
+
+.data__header-buttons
+    display: flex
+    justify-content: space-between
+    margin-bottom: 8px
+    max-width: 505px
+    width: 100%
+    button
+        font-size: 16px
+        font-weight: 600
+        margin: 0
+        cursor: pointer
+        &:hover
+            color: orange
+
+.data__form
+    margin: 0 auto
+    max-width: 609px
+    width: 100%
+    h1
+        margin-bottom: 30px
+        font-size: 24px
+    p
+        font-size: 12px
+        line-height: 15px
+        color: #999999
+        margin: 5px 0 20px 0
+
+.data__form input
+    width: 100%
+    border-radius: 8px
+    border: 1px solid transparent
+    background: #F5F5F5
+    height: 56px
+    padding: 23px 15px 0 15px
+    outline: none
+    font-size: 16px
+    &:disabled
+        background: white
+        border: 1px solid #CECECE
+    &:enabled:hover
+        border: 1px solid #FFB13C
+    &:focus
+        border: 1px solid #FFB13C
+        background: white
+        & ~ label
+            top: 9px
+            font-size: 12px
+    &:not(:placeholder-shown)
+        border: 1px solid orange
+        background: white
+        & ~ label
+            top: 9px
+            font-size: 12px
+    &:invalid
+        border: 1px solid red
+
+.data__form-about-name, .data__form-about-surname, .data__form-about-birthday, .data__form-contacts-number, .data__form-contacts-email
+    position: relative
+    label
+        color: #CECECE
+        position: absolute
+        pointer-events: none
+        top: 20px
+        left: 16px
+
+.data__form-about
+    margin: 34px 0px 40px 0px
+    h1
+        margin: 0 0 30px 0
+
+@media ( max-width:1194px)
+    .header-upper 
+        .header-upper__input
+            max-width: 550px
+
+    .data
+        max-width: 943px
+
+    .data__header
+        margin: 60px 0 0 96px 
+        .data__header-buttons
+            button
+                max-width: 180px
+
+    .data__header-buttons
+        max-width: 466px
+
+    .data__header
+        max-width: 656px
+
+    .data__form
+        max-width: 562px
+
+
+    .main-wrapper
+        height: 831px
+
+@media ( max-width:834px)
+
+    .header
+        margin: 0 auto 30px auto
+
+    .header-upper 
+        .header-upper__input
+            margin-left: 22%
+            max-width: 377px
+
+    .header-upper__burger
+        display: block
+
+    .header-down, .header-upper p
+        display: none
+
+    .test_task-inner-container
+        padding: 0 32px
+
+    .side-bar-wrapper
+        width: 181px
+        margin-right: 17px
+
+    .data
+        max-width: 572px
+
+    .main-wrapper
+        height: 1104px
+
+    .data__form
+        max-width: 439px
+
+    .data__header
+        flex-wrap: wrap
+        justify-content: center
+        gap: 30px
+        margin: 60px 0 0 0 
+
+    .data__header-buttons
+        max-width: 442px
+        margin: 0
+
+    .data__form-about
+        margin: 32px 0px 40px 0px
+
+@media ( max-width:375px)
+
+    .main-wrapper
+        height: 1016px
+
+    body #test_task
+        padding: 0
+    
+    .test_task-inner-container
+        padding: 0
+
+    .header, .side-bar-wrapper
+        display: none
+
+    .data
+        border-radius: 0
+        p
+            display: block
+
+    .data__header
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        margin: 0
+        gap: 0
+        .data__header-logo
+            p
+                font-weight: 700
+            svg
+                position: absolute
+                top: 24px
+                left: 21px
+
+    .data__header
+        .data__header-buttons
+            flex-direction: column
+            align-items: center
+            height: 88px
+            button
+                max-width: 343px 
+
+    .data__header-logo
+        margin-bottom: 20px 
+
+    .data__header-logo
+        display: block  
+
+    .data__header-avatar
+        margin-bottom: 30px
+
+
+    
+    .data__form
+        padding: 0 16px
+        .data__form-about 
+            margin: 35px 0px 35px 0px
+            h1
+                font-size: 20px
+                font-weight: 700
+                margin: 0 0 20px 0
+        .data__form-contacts
+            margin-bottom: 32px
+            h1
+                font-size: 20px
+                font-weight: 700
+                margin: 0 0 25px 0 
+
+    .data__form-tabbar
+        display: block
+
+    .data__form-tabbar 
+        display: flex
+        justify-content: space-between
+        align-items: center
+        p
+            display: flex
+            flex-direction: column
+            justify-content: center
+            align-items: center
+            margin: 0
+            color: black
+            font-size: 10px
+            &:hover
+                color: orange
+                svg path
+                    fill: currentColor
+
+
+
+
